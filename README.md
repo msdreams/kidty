@@ -21,4 +21,4 @@ Install dependencies: npm install
 Start the development server: npm start
 Open your browser and go to http://localhost:3000 to view the application.
 Feel free to contribute or provide feedback!
-    - [DEMO LINK](https://fe-july-91.github.io/kidti/)
+    - [DEMO LINK](https://msdreams.github.io/kidty/)
