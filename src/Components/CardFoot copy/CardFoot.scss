@@ -1,116 +1,114 @@
 @import './../../styles/main';
 
 .foot {
-  &__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 22px;
+
+  @include middle {
+    .edit-button {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+  
+    &:hover {
+      .edit-button {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__top {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 24px 22px;
+    align-items: top;
+    width: 100%;
 
-    @include middle {
-      .edit-button {
-        opacity: 0;
-        transition: opacity 0.2s ease;
-      }
-    
-      &:hover {
-        .edit-button {
-          opacity: 1;
-        }
-      }
-    }
-
-    &-top {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    @include on-tablet {
+      flex-direction: row;
+      justify-content: space-between;
       align-items: top;
-      width: 100%;
-
-      @include on-tablet {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: top;
-      }
     }
+  }
 
-    &-top-leftBlock {
-      display: flex;
-      gap: 4px;
-      align-items: flex-start;
+  &__top-leftBlock {
+    display: flex;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__image {
+    width: $iconWidth - 2;
+    object-fit: contain;
+  }
+
+  &__selectors {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 104px;
+  }
+
+  &__select {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid $colorGrayDarck;
+    color: $colorTextSecond;
+    width: $selectionWidth;
+
+  }
+
+  &__chart {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  &__values{
+    display: flex;
+    gap: 8px;
+    align-items:baseline;
+    width: max-content;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    color: $colorTextSecond;
+    &-active {
+      color: $colorCyclamen;
+    }
+  }
+
+  &__value {
+    font-size: 24px;
+    font-weight: 500;
+    color: $colorTextSecond;
+    &--active {
+      color: $colorCyclamen;
+    }
+  }
+
+  &__edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 8px;
+    gap: 24px;
+
+    @include on-tablet {
+      padding-top: 0;
+      align-items: flex-end;
       justify-content: flex-start;
-    }
-
-    &-image {
-      width: $iconWidth - 2;
-      object-fit: contain;
-    }
-
-    &-selectors {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      height: 104px;
-    }
-
-    &-select {
-      border: none;
-      background-color: $colorGrayLight;
-      border-bottom: 1px solid $colorGrayDarck;
-      color: $colorTextSecond;
-      width: $selectionWidth;
-
-    }
-
-    &-chart {
-      width: 100%;
-      max-width: 380px;
-    }
-
-    &-values{
-      display: flex;
-      gap: 8px;
-      align-items:baseline;
-      width: max-content;
-    }
-
-    &-title {
-      font-size: 24px;
-      font-weight: 500;
-      color: $colorTextSecond;
-      &-active {
-        color: $colorCyclamen;
-      }
-    }
-
-    &-value {
-      font-size: 24px;
-      font-weight: 500;
-      color: $colorTextSecond;
-      &-active {
-        color: $colorCyclamen;
-      }
-    }
-
-    &-edit {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 8px;
       gap: 24px;
-
-      @include on-tablet {
-        padding-top: 0;
-        align-items: flex-end;
-        justify-content: flex-start;
-        gap: 24px;
-      }
     }
+  }
 
-    &__button {
-      @include button-card;
-    }
+  &__button {
+    @include button-card;
   }
 }

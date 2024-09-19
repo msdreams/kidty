@@ -57,29 +57,29 @@ export const CardEyes: React.FC<Props> = ({ data }) => {
   };
 
   return (
-    <div className="eyes__item">
-      <div className="eyes__item-top">
-        <div className="eyes__item-top-leftBlock">
-          <img src={eye} alt="eye" className="eyes__item-image"/>
-          <p className="eyes__item-title">Зiр</p>
+    <div className="eyes">
+      <div className="eyes__top">
+        <div className="eyes__top-leftBlock">
+          <img src={eye} alt="eye" className="eyes__image"/>
+          <p className="eyes__title">Зiр</p>
         </div>
 
 
-        <div className="eyes__item--edit">
+        <div className="eyes__edit">
           {!activeSlider ? (
-            <button className="card__item__button card__item__button-big edit-button" onClick={handleEditClick}>
+            <button className="card__button card__button-big edit-button" onClick={handleEditClick}>
               {" "}
               Редагувати
             </button>
           ) : (
-            <div className="card__item__button--container">
-              <button className="card__item__button" onClick={handleApplyClick}>
+            <div className="card__button--container">
+              <button className="card__button" onClick={handleApplyClick}>
                 {" "}
                 Додати
               </button>
 
               <button
-                className="card__item__button card__item__button--cansel"
+                className="card__button card__button--cansel"
                 onClick={handleCanсelClick}
               >
                 {" "}
@@ -90,12 +90,12 @@ export const CardEyes: React.FC<Props> = ({ data }) => {
         </div>
       </div>
 
-      <div className="eyes__item__eyes">
-        <div className="eyes__item-values">
-        <p className="eyes__item-sign">Ліве око:</p>
+      <div className="eyes__eyes">
+        <div className="eyes__values">
+        <p className="eyes__sign">Ліве око:</p>
         <p
-          className={cn("eyes__item-value", {
-            "eyes__item-value-activeLeft": activeSlider,
+          className={cn("eyes__value", {
+            "eyes__value--activeLeft": activeSlider,
           })}
         >
           {activeSlider
@@ -134,12 +134,12 @@ export const CardEyes: React.FC<Props> = ({ data }) => {
         )}
       </div>
 
-      <div className="eyes__item__eyes">
-        <div className="eyes__item-values">
-          <p className="eyes__item-sign">Праве око:</p>
+      <div className="eyes__eyes">
+        <div className="eyes__values">
+          <p className="eyes__sign">Праве око:</p>
           <p
-            className={cn("eyes__item-value", {
-              "eyes__item-value-active": activeSlider,
+            className={cn("eyes__value", {
+              "eyes__value--active": activeSlider,
             })}
           >
             {activeSlider
@@ -178,21 +178,21 @@ export const CardEyes: React.FC<Props> = ({ data }) => {
         )}
       </div>
 
-      <div className="eyes__item--mobile-edit">
+      <div className="eyes__mobile-edit">
           {!activeSlider ? (
-            <button className="eyes__item__button" onClick={handleEditClick}>
+            <button className="eyes__button" onClick={handleEditClick}>
               {" "}
               Редагувати
             </button>
           ) : (
-            <div className="eyes__item__button--container">
-              <button className="eyes__item__button" onClick={handleApplyClick}>
+            <div className="eyes__button-container">
+              <button className="eyes__button" onClick={handleApplyClick}>
                 {" "}
                 Додати
               </button>
 
               <button
-                className="eyes__item__button eyes__item__button--cansel"
+                className="eyes__button eyes__button--cansel"
                 onClick={handleCanсelClick}
               >
                 {" "}
@@ -202,7 +202,7 @@ export const CardEyes: React.FC<Props> = ({ data }) => {
           )}
       </div>
 
-      <div className="eyes__item-chart">
+      <div className="eyes__chart">
         <EyesChart
           width={400}
           height={200}

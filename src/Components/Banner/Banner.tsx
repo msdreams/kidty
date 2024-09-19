@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Banner.scss';
 import { avatars } from '../../Utils/kit';
 
@@ -6,11 +6,11 @@ const Banner = () => {
   const letters = ['K', 'I', 'D', 'T', 'Y'];
   const shapes = ['circle', 'square', 'rectangle', 'd-shape', 't-shape'];
   const colors = ['#6771DE', '#C88CF8', '#50C3F9', '#6c6e90'];
-
-  const [animationDirection, setAnimationDirection] = useState<'up' | 'down'>('up');
-
   const rows = 10;
   const columns = 5;
+
+  const [animationDirection, setAnimationDirection] = useState<'up' | 'down'>('up');
+  const [grid, setGrid] = useState(generateInitialGrid());
 
   function generateInitialGrid() {
     const items = [];
@@ -26,17 +26,14 @@ const Banner = () => {
     const randomType = Math.random();
 
     if (randomType < 0.33) {
-      // Генерация буквы
       const letterIndex = key % letters.length;
       const randomLetter = letters[letterIndex];
       return { type: 'letter', content: randomLetter, color: '#6c6e90', key, columnIndex };
     } else if (randomType < 0.66) {
-      // Генерация формы
       const randomShape = shapes[Math.floor(Math.random() * shapes.length)];
       const randomColor = colors[Math.floor(Math.random() * colors.length)];
       return { type: `shape ${randomShape}`, color: randomColor, key, columnIndex };
     } else {
-      // Генерация аватара
       const randomAvatar = avatars[Math.floor(Math.random() * avatars.length)];
       return { type: 'avatar', src: randomAvatar, key, columnIndex };
     }
@@ -44,10 +41,19 @@ const Banner = () => {
   
 
   const handleMouseDown = (event: React.MouseEvent) => {
-    if (event.button === 0) { // Проверка, что нажата левая кнопка мыши
-      setAnimationDirection(prev => prev === 'up' ? 'down' : 'up'); // Переключение направления
+    if (event.button === 0) { 
+      setAnimationDirection(prev => prev === 'up' ? 'down' : 'up');
     }
   };
+
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setGrid(generateInitialGrid()); 
+    }, 5000);
+
+    return () => clearInterval(interval); 
+  }, []);
 
   return (
     <div

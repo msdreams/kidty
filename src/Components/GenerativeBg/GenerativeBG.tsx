@@ -8,10 +8,8 @@ const GenerativeBG = () => {
   const rows = 30;
   const columns = 30;
 
-  // Используем состояние для хранения сетки
   const [grid, setGrid] = useState(generateInitialGrid());
 
-  // Генерация начальной сетки
   function generateInitialGrid() {
     const items = [];
     for (let i = 0; i < rows; i++) {
@@ -22,20 +20,18 @@ const GenerativeBG = () => {
     return items;
   }
 
-  // Генерация случайного элемента
   function generateRandomItem(key: number, columnIndex: number) {
     const randomShape = shapes[Math.floor(Math.random() * shapes.length)];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     return { type: `shape ${randomShape}`, color: randomColor, key, columnIndex };
   }
 
-  // Обновление сетки каждую секунду
   useEffect(() => {
     const interval = setInterval(() => {
-      setGrid(generateInitialGrid()); // Обновляем сетку
-    }, 1000); // Каждую секунду
+      setGrid(generateInitialGrid()); 
+    }, 1000);
 
-    return () => clearInterval(interval); // Очищаем интервал при размонтировании
+    return () => clearInterval(interval); 
   }, []);
 
   return (
@@ -47,7 +43,7 @@ const GenerativeBG = () => {
             className={`bg-grid-item ${item.type}`}
             style={{
               backgroundColor: item.type.startsWith('shape') ? item.color : undefined,
-              color: item.type === 'letter' ? item.color : undefined, // Цвет для букв
+              color: item.type === 'letter' ? item.color : undefined,
               transitionDelay: `${item.columnIndex * 100}ms`,
             }}
           >

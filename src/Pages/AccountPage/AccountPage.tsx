@@ -87,42 +87,42 @@ export const AccountPage: React.FC = () => {
   return (
     <div className="account">
       <GenerativeBG />
-      <div className="account__top">
-        <div className="account__top__personalInfo">
+      <div className="account__top top">
+        <div className="top__person">
           <img
             src={avatars[child.image]}
             alt="avatar"
-            className="account__top__personalInfo--image"
+            className="top__person-image"
             onClick={() => {
               console.log('Image clicked');
               setAdditingModal(true);
             }}
             />
-          <div  className="account__top__personalInfo--info">
-            <header className="account__top__personalInfo-name">
+          <div  className="top__person-info">
+            <header className="top__person-name">
             {child.name}
             </header>
-            <p className="account__top__personalInfo-txt">Вік: {fullAge.years}p. {fullAge.months}м.</p>
-            <p className="account__top__personalInfo-txt">Pік народження: {child.birth}</p>
-            <p className="account__top__personalInfo-txt">Стать: дівчинка</p>
+            <p className="top__person-txt">Вік: {fullAge.years}p. {fullAge.months}м.</p>
+            <p className="top__person-txt">Pік народження: {child.birth}</p>
+            <p className="top__person-txt">Стать: дівчинка</p>
           </div>
         </div>
 
-        <div className="account__top__avatars">
-      {Children.map((childItem, index) => (
-        <div key={index} className="account__top__avatars__card-container">
-          <button
-            className={`account__top__avatars__card ${activeIndex === index ? 'active' : ''}`}
-            onClick={() => handleChildChange(index, childItem)}
-          >
-            <img src={avatars[childItem.image]} alt="avatar" className="account__top__avatars__card--image" />
-          </button>
+        <div className="top__avatars avatars">
+          {Children.map((childItem, index) => (
+            <div key={index} className="avatars__card-container">
+              <button
+                className={`avatars__card ${activeIndex === index ? 'active' : ''}`}
+                onClick={() => handleChildChange(index, childItem)}
+              >
+                <img src={avatars[childItem.image]} alt="avatar" className="avatars__card avatars__card--image" />
+              </button>
         </div>
       ))}
 
-      <button className="account__top__avatars__add" onClick={handleAddChild}>
-        <div className="account__top__avatars__add--plus"> + </div>
-        <div className="account__top__avatars__add--text">Додати<br />дитину</div>
+      <button className="avatars__add" onClick={handleAddChild}>
+        <div className="avatars__add avatars__add--plus"> + </div>
+        <div className="avatars__add avatars__add--text">Додати<br />дитину</div>
       </button>
     </div>
       </div>

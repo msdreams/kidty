@@ -6,136 +6,7 @@
 
   &__top {
     @include padding-inline;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px;
-    align-items: flex-end;
-    padding-bottom: 24px;
-    padding-top: 24px;
-    box-shadow: 0px 4px 8px rgba(34, 2, 73, 0.2);
     z-index: 2;
-
-
-
-    &__personalInfo {
-      display: flex;
-      flex-direction: row;
-      justify-content:flex-start;
-      align-items: flex-start;
-      gap: 16px;
-
-      &--image {
-        width: 100px;
-        height: auto;
-        object-fit: cover;
-        border-radius: 15%;
-        box-shadow: 0px 0px 8px rgba(34, 2, 73, 0.2);
-
-        &:hover {
-          border: 1px solid $colorGrayDarck;
-        }
-
-        @include on-desktop {
-          width: 118px;
-          height: auto;
-          object-fit: cover;
-        }
-      }
-
-      &--info {
-        display: flex;
-        flex-direction: column;
-        justify-content:flex-start;
-        gap: 4px;
-      }
-  
-      &-name {
-        font-size: 24px;
-        font-weight: 400;
-        color: $colorIndigoDark;
-        padding-bottom: 4px;
-
-        @include on-desktop {
-          padding-bottom: 10px;
-          font-size: 26px;
-          color: $colorIndigoDark;
-        }
-      }
-  
-      &-txt {
-        font-size: 16px;
-        color: $colorTextThird;
-
-        @include on-desktop {
-          font-size: 18px;
-        }
-      }
-    }
-
-    &__avatars {
-      position: relative;
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      gap: 8px;
-  
-      &__card {
-        width: 50px;
-        height: 50px;
-        background-color: $colorGrayLight;
-        border-radius: 50%;
-        box-shadow: 0px 0px 8px rgba(34, 2, 73, 0.2);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        border: 2px solid #fff;
-        transform: border 0.6s ease;
-
-        &:hover {
-          border: 2px solid $colorGrayDarck;
-        }
-
-        &.active {
-          border: 2px solid $colorLavender;
-        }
-
-        &--image {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-  
-      &__add {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 8px;
-        cursor: pointer;
-  
-        &--text {
-          color: $colorTextSecond;
-          font-size: 12px;
-          text-align: center;
-          &:hover {
-            color: $colorVeronica;
-          }
-        }
-
-        &--plus {
-          color: $colorTextSecond;
-          font-size: 24px;
-          text-align: center;
-          &:hover {
-            color: $colorVeronica;
-          }
-        }
-      }
-  
-    }
   }
 
   &__container {
@@ -149,5 +20,142 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 20;
+  }
+}
+
+.top {
+  @include padding-inline;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-end;
+  padding-bottom: 24px;
+  padding-top: 24px;
+  box-shadow: 0px 4px 8px rgba(34, 2, 73, 0.2);
+  z-index: 2;
+
+
+
+  &__person {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  &__person-image {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15%;
+    box-shadow: 0px 0px 8px rgba(34, 2, 73, 0.2);
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid $colorGrayDarck;
+    }
+
+    @include on-desktop {
+      width: 118px;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__person-info {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    gap: 4px;
+  }
+
+  &__person-name {
+    font-size: 24px;
+    font-weight: 400;
+    color: $colorIndigoDark;
+    padding-bottom: 4px;
+
+    @include on-desktop {
+      padding-bottom: 10px;
+      font-size: 26px;
+      color: $colorIndigoDark;
+    }
+  }
+
+  &__person-txt {
+    font-size: 16px;
+    color: $colorTextThird;
+
+    @include on-desktop {
+      font-size: 18px;
+    }
+  }
+
+  &__avatars {
+    position: relative;
+  }
+}
+
+.avatars {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+
+  &__card {
+    width: 50px;
+    height: 50px;
+    background-color: $colorGrayLight;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px rgba(34, 2, 73, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid #fff;
+    transform: border 0.6s ease;
+    cursor: pointer;
+
+    &:hover {
+      border: 2px solid $colorGrayDarck;
+    }
+
+    &.active {
+      border: 2px solid $colorLavender;
+    }
+
+    &--image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__add {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+
+    &--text {
+      color: $colorTextSecond;
+      font-size: 12px;
+      text-align: center;
+      &:hover {
+        color: $colorVeronica;
+      }
+    }
+
+    &--plus {
+      color: $colorTextSecond;
+      font-size: 24px;
+      text-align: center;
+      &:hover {
+        color: $colorVeronica;
+      }
+    }
   }
 }

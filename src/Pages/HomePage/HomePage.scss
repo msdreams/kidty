@@ -6,7 +6,11 @@
   height: auto;
   
   @include on-tablet {
-    height: 100vh;
+    height: calc(100vh - 48px * 2);
+  }
+  
+  @include on-desktop {
+    height: calc(100vh - 64px * 2);
   }
 
   &__top {
@@ -67,18 +71,16 @@
   }
 
   &__bunner {
-    padding-top: 20px;
+    padding: 20px;
+    padding-left: 60px;
     grid-column: 1 / -1;
-    padding-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 8px rgba(34, 2, 73, 0.2);
+    border-radius: 25px;
+    margin-bottom: 20px;
 
     @include middle {
       grid-column: 1 / 12;
-    }
-
-    &--img {
-      width: 100%;
-      height: auto;
-      object-fit: contain; 
     }
   }
 

@@ -128,16 +128,16 @@ export const CardWeight: React.FC<Props> = ({ data, years }) => {
   };
 
   return (
-    <div className="card__item">
-      <div className="card__item-top">
-        <div className="card__item-top-leftBlock">
-          <img src={weight} alt="foot" className="card__item-image"/>
-          <div className="card__item-selectors">
-            <div className="card__item-values">
-              <p className="card__item-title">Вага:</p>
+    <div className="card">
+      <div className="card__top">
+        <div className="card__top-leftBlock">
+          <img src={weight} alt="foot" className="card__image"/>
+          <div className="card__selectors">
+            <div className="card__values">
+              <p className="card__title">Вага:</p>
               <p
-                className={cn("card__item-title", {
-                  "card__item-title-active": activeSlider,
+                className={cn("card__title", {
+                  "card__title--active": activeSlider,
                 })}
               >
                 {activeSlider
@@ -147,7 +147,7 @@ export const CardWeight: React.FC<Props> = ({ data, years }) => {
             </div>
 
             <select
-              className="card__item-select"
+              className="card__select"
               value={selectedYear}
               onChange={handleYearChange}
             >
@@ -159,7 +159,7 @@ export const CardWeight: React.FC<Props> = ({ data, years }) => {
             </select>
 
             <select
-              className="card__item-select"
+              className="card__select"
               value={selectedMonth}
               onChange={handleMonthChenge}
             >
@@ -172,7 +172,7 @@ export const CardWeight: React.FC<Props> = ({ data, years }) => {
             </div>
         </div>
 
-        <div className="card__item-edit">
+        <div className="card__edit">
           {activeSlider && (
             <Slider
               axis="x"
@@ -201,19 +201,19 @@ export const CardWeight: React.FC<Props> = ({ data, years }) => {
             />
           )}
           {!activeSlider ? (
-            <button className="card__item__button card__item__button-big edit-button" onClick={handleEditClick}>
+            <button className="card__button card__button-big edit-button" onClick={handleEditClick}>
               {" "}
               Редагувати
             </button>
              ) : (
-            <div className="card__item__button--container">
-              <button className="card__item__button" onClick={handleApplyClick}>
+            <div className="card__button--container">
+              <button className="card__button" onClick={handleApplyClick}>
                 {" "}
                 Додати
               </button>
 
               <button
-                className="card__item__button card__item__button--cansel"
+                className="card__button card__button--cansel"
                 onClick={handleCanсelClick}
               >
                 {" "}
@@ -224,7 +224,7 @@ export const CardWeight: React.FC<Props> = ({ data, years }) => {
         </div>
       </div>
 
-      <div className="card__item-chart">
+      <div className="card__chart">
         <WeightLineChart
           width={400}
           height={200}

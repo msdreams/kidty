@@ -130,16 +130,16 @@ export const CardFoot: React.FC<Props> = ({ data, years }) => {
   const filteredData = newData.filter((d) => d.year === selectedYear);
 
   return (
-    <div className="foot__item">
-      <div className="foot__item-top">
-        <div className="foot__item-top-leftBlock">
-          <img src={foot} alt="foot" className="foot__item-image"/>
-          <div className="foot__item-selectors">            
-            <div className="foot__item-values">
-              <p className="foot__item-title">Cтопa:</p>
+    <div className="foot">
+      <div className="foot__top">
+        <div className="foot__top-leftBlock">
+          <img src={foot} alt="foot" className="foot__image"/>
+          <div className="foot__selectors">            
+            <div className="foot__values">
+              <p className="foot__title">Cтопa:</p>
               <p
-                className={cn("foot__item-value", {
-                  "foot__item-value-active": activeSlider,
+                className={cn("foot__value", {
+                  "foot__value--active": activeSlider,
                 })}
               >
                 {activeSlider
@@ -149,7 +149,7 @@ export const CardFoot: React.FC<Props> = ({ data, years }) => {
             </div>
 
             <select
-              className="foot__item-select"
+              className="foot__select"
               value={selectedYear}
               onChange={handleYearChange}
             >
@@ -161,7 +161,7 @@ export const CardFoot: React.FC<Props> = ({ data, years }) => {
             </select>
 
             <select
-              className="foot__item-select"
+              className="foot__select"
               value={selectedMonth}
               onChange={handleMonthChenge}
             >
@@ -174,7 +174,7 @@ export const CardFoot: React.FC<Props> = ({ data, years }) => {
           </div>
         </div>
 
-        <div className="foot__item-edit">
+        <div className="foot__edit">
           {activeSlider && (
             <Slider
               axis="x"
@@ -203,18 +203,18 @@ export const CardFoot: React.FC<Props> = ({ data, years }) => {
               />
           )}
           {!activeSlider ? (
-            <button className="card__item__button card__item__button-big edit-button" onClick={handleEditClick}>
+            <button className="card__button card__button-big edit-button" onClick={handleEditClick}>
               {" "}
               Редагувати
             </button>
           ) : (
-            <div className="card__item__button--container">
-              <button className="card__item__button" onClick={handleApplyClick}>
+            <div className="card__button--container">
+              <button className="card__button" onClick={handleApplyClick}>
                 Додати
               </button>
 
               <button
-                className="card__item__button card__item__button--cansel"
+                className="card__button card__button--cansel"
                 onClick={handleCanсelClick}
               >
                 Скасувати
@@ -224,7 +224,7 @@ export const CardFoot: React.FC<Props> = ({ data, years }) => {
         </div>
       </div>
 
-        <div className="foot__item-chart">        
+        <div className="foot__chart">        
           <FootChart
             width={400}
             height={200}

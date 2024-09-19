@@ -142,14 +142,14 @@ export const CardVaccines: React.FC<Props> = ({ data, child }) => {
   return (
     <div className="vaccine">
       <div className="vaccine__top">
-        <div className="vaccine__top--leftBlock">
-          <div className="vaccine__top--title">
-            <img src={vaccine} alt="foot" className="vaccine__top--image" />
+        <div className="vaccine__top-leftBlock">
+          <div className="vaccine__title">
+            <img src={vaccine} alt="foot" className="vaccine__image" />
             <p>Щеплення</p>
           </div>
         </div>
 
-        <div className="vaccine--chart-mobile">
+        <div className="vaccine__chart-mobile">
         <VaccinesMobile
             width={500}
             height={360}
@@ -164,20 +164,20 @@ export const CardVaccines: React.FC<Props> = ({ data, child }) => {
           />
       </div>
 
-        <div className="vaccine__top--rightBlock">
+        <div className="vaccine__top-rightBlock">
           {!activeVaccine && !activeBatton ? (
             <button
-              className="vaccine__top__button edit-button"
+              className="vaccine__button edit-button"
               onClick={handleEditClick}
             >
               Редагувати
             </button>
           ) : (
               <>
-            <div className="vaccine__top--picker">
+            <div className="vaccine__picker">
               {!activeVaccine ? (
                 <select
-                  className="vaccine__top--selectVaccine"
+                  className="vaccine__selectVaccine"
                   value={selectedVaccine}
                   onChange={handleVaccineChenge}
                 >
@@ -188,13 +188,13 @@ export const CardVaccines: React.FC<Props> = ({ data, child }) => {
                   ))}
                 </select>
               ) : (
-                <span className="vaccine__top--type">{selectedVaccine}</span>
+                <span className="vaccine__type">{selectedVaccine}</span>
                   )}
                   
                   <input
                   type="date"
-                  className="vaccine__top--selectDate"
-                  value={startDate.toISOString().split('T')[0]} // Преобразование даты в формат yyyy-mm-dd
+                  className="vaccine__selectDate"
+                  value={startDate.toISOString().split('T')[0]}
                   onChange={(e) => {
                     const newDate = new Date(e.target.value);
                     setStartDate(newDate);
@@ -202,15 +202,15 @@ export const CardVaccines: React.FC<Props> = ({ data, child }) => {
                 />
               </div>
               
-              <div className="vaccine__top__button__container">
+              <div className="vaccine__button-container">
               <button 
-                className="vaccine__top__button vaccine__top__button--add" 
+                className="vaccine__button vaccine__button--add" 
                 onClick={handleApplyClick}
                   >
                     {activeVaccine ? `Зберегти` : `Додати`}
               </button>
                     <button
-                    className="vaccine__top__button vaccine__top__button--cancel"
+                    className="vaccine__button vaccine__button--cancel"
                     onClick={handleRemoveClick}
                   >
                     {" "}
@@ -222,7 +222,7 @@ export const CardVaccines: React.FC<Props> = ({ data, child }) => {
         </div>
       </div>
 
-      <div className="vaccine--chart">
+      <div className="vaccine__chart">
         <VaccinesChart
             width={800}
             height={360}

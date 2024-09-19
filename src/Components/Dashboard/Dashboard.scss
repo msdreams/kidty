@@ -18,7 +18,7 @@
 
   @include on-desktop {
     grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    gap: 24px;
   }
 
   &__item {
@@ -37,7 +37,7 @@
     }
   }
 
-  &__item-big {
+  &__item--big {
     position: relative;
     @include on-tablet {
       width: 100%;

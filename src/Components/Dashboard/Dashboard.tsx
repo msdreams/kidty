@@ -37,7 +37,7 @@ export const Dashboard: React.FC<Props> = ({ child, heightData, weightData, foot
       <div className="dashboard__item">
       <CardEyes data={eyesData}/>
       </div>
-      <div className="dashboard__item dashboard__item-big">
+      <div className="dashboard__item dashboard__item--big">
         <CardVaccines
           data={vaccinesData}
           years={years}
