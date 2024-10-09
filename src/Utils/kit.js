@@ -67,7 +67,7 @@ export const plusHover = plusImageHover;
 export const account = logInimage;
 export const settings = gear;
 export const bunner = image;
-export const sliderWidth = "200px";
+export const sliderWidth = "150px";
 export const sliderWidthMobile = "300px";
 
 

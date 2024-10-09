@@ -100,18 +100,18 @@
     justify-content: flex-start;
     padding-top: 8px;
     gap: 24px;
-    width: 130px;
-    transition: width 0.2s ease;
-
-    &--active {
-      width: 210px;
-    }
 
     @include on-tablet {
       padding-top: 0;
       align-items: flex-end;
       justify-content: flex-start;
       gap: 24px;
+      width: 120px;
+      transition: width 0.2s ease;
+  
+      &--active {
+        width: 200px;
+      }
     }
   }
 

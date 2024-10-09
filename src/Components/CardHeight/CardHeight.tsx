@@ -184,7 +184,7 @@ export const CardHeight: React.FC<Props> = ({ data, years }) => {
                 track: {
                   backgroundColor: "#ddd",
                   height: "8px",
-                  width: sliderWidth,
+                  width: "80%",
                   borderRadius: "4px",
                 },
                 active: {
@@ -198,7 +198,7 @@ export const CardHeight: React.FC<Props> = ({ data, years }) => {
                   boxShadow: "0px 0px 4px rgba(0,0,0,0.2)",
                 },
               }}
-            />
+              />
           )}
           {!activeSlider ? (
             <button className="card__item__button card__item__button-big edit-button" onClick={handleEditClick}>

@@ -90,11 +90,6 @@
       justify-content: flex-start;
       padding-top: 8px;
       gap: 24px;
-      width: 130px;
-      transition: width 0.2s ease;
-  
-      &--active {
-        width: 210px;
       }
 
       @include on-tablet {
@@ -102,6 +97,11 @@
         align-items: flex-end;
         justify-content: flex-start;
         gap: 24px;
+        width: 100px;
+        transition: width 0.2s ease;
+    
+        &--active {
+          width: 200px;
       }
     }
 

@@ -186,7 +186,7 @@ export const CardWeight: React.FC<Props> = ({ data, years }) => {
                 track: {
                   backgroundColor: "#ddd",
                   height: "8px",
-                  width: sliderWidth,
+                  width: "80%",
                   borderRadius: "4px",
                 },
                 active: {
