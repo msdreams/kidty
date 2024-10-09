@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kidty/static/css/main.bf712194.css",
-    "main.js": "/kidty/static/js/main.0114b67c.js",
+    "main.css": "/kidty/static/css/main.4c1d978b.css",
+    "main.js": "/kidty/static/js/main.dd50c9d1.js",
     "static/media/Bunner_kitty.png": "/kidty/static/media/Bunner_kitty.7d50be91e7a00268ec2b.png",
     "static/media/Rubik-Bold.ttf": "/kidty/static/media/Rubik-Bold.c934eb22c2c69992b34c.ttf",
     "static/media/Rubik-Medium.ttf": "/kidty/static/media/Rubik-Medium.0e121b4fa4d6e9bc5c69.ttf",
@@ -33,11 +33,11 @@
     "static/media/menu.svg": "/kidty/static/media/menu.34118b66bb2b56119104.svg",
     "static/media/plus.svg": "/kidty/static/media/plus.7dc9baccea663fd1fb9f100963e4813d.svg",
     "static/media/plusHover.svg": "/kidty/static/media/plusHover.522c64c0fd29ff310ab771e4c6ddeeca.svg",
-    "main.bf712194.css.map": "/kidty/static/css/main.bf712194.css.map",
-    "main.0114b67c.js.map": "/kidty/static/js/main.0114b67c.js.map"
+    "main.4c1d978b.css.map": "/kidty/static/css/main.4c1d978b.css.map",
+    "main.dd50c9d1.js.map": "/kidty/static/js/main.dd50c9d1.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf712194.css",
-    "static/js/main.0114b67c.js"
+    "static/css/main.4c1d978b.css",
+    "static/js/main.dd50c9d1.js"
   ]
 }
