@@ -47,6 +47,7 @@
   }
 
   &__selectors {
+    min-width: 142px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -75,7 +76,7 @@
   }
 
   &__title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
     color: $colorTextSecond;
     &-active {
@@ -99,6 +100,12 @@
     justify-content: flex-start;
     padding-top: 8px;
     gap: 24px;
+    width: 130px;
+    transition: width 0.2s ease;
+
+    &--active {
+      width: 210px;
+    }
 
     @include on-tablet {
       padding-top: 0;

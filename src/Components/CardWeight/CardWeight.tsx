@@ -172,7 +172,9 @@ export const CardWeight: React.FC<Props> = ({ data, years }) => {
             </div>
         </div>
 
-        <div className="card__edit">
+        <div className={cn("card__edit", {
+          "card__edit--active": activeSlider,
+        })}>
           {activeSlider && (
             <Slider
               axis="x"

@@ -65,7 +65,9 @@ export const CardEyes: React.FC<Props> = ({ data }) => {
         </div>
 
 
-        <div className="eyes__edit">
+        <div className={cn("eyes__edit", {
+          "eyes__edit--active": activeSlider,
+        })}>
           {!activeSlider ? (
             <button className="card__button card__button-big edit-button" onClick={handleEditClick}>
               {" "}

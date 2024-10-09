@@ -68,7 +68,7 @@
   }
 
   &__title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
     color: $colorTextSecond;
 
@@ -105,6 +105,12 @@
     gap: 24px;
     align-items: flex-end;
     justify-content: flex-start;
+    width: 130px;
+    transition: width 0.2s ease;
+
+    &--active {
+      width: 200px;
+    }
   }
 
   &__mobile-edit {

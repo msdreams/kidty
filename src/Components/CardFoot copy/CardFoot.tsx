@@ -174,7 +174,9 @@ export const CardFoot: React.FC<Props> = ({ data, years }) => {
           </div>
         </div>
 
-        <div className="foot__edit">
+        <div className={cn("foot__edit", {
+          "foot__edit--active": activeSlider,
+        })}>
           {activeSlider && (
             <Slider
               axis="x"
