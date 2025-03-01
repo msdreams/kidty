@@ -25,27 +25,6 @@ export const AccountPage: React.FC = () => {
   const [modal, setModal] = useState(false);
   const [additingModal, setAdditingModal] = useState(false);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const ChildCard: ChildData = await getData(`/ChildData_${child.id}.json`);
-
-  //     const heightCard = ChildCard.find(item => item.type === "height") as YearlyMeasurementData;
-  //     const weightCard = ChildCard.find(item => item.type === "weight") as YearlyMeasurementData;
-  //     const footCard = ChildCard.find(item => item.type === "foot") as YearlyMeasurementData;
-  //     const eyeCard = ChildCard.find(item => item.type === "eyes") as EyesData;
-  //     const vaccinesCard = ChildCard.find(item => item.type === "vaccines") as VaccinesData;
-
-
-  //       setHeightData(heightCard.data);
-  //       setWeightData(weightCard.data);
-  //       setFootData(footCard.data);
-  //       setEyesData(eyeCard.data);
-  //       setVaccinesData(vaccinesCard.data);
-  //   };
-
-  //   fetchData()
-  //   .catch(error => console.error('Error fetching data:', error));
-  // }, [child]);
   const ChildsDataArray = [ChildCard_1, ChildCard_2]
 
   useEffect(() => {
