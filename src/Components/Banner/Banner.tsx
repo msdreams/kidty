@@ -67,7 +67,7 @@ const Banner = () => {
             className={`grid-item ${item.type}`}
             style={{
               backgroundColor: item.type.startsWith('shape') ? item.color : undefined,
-              color: item.type === 'letter' ? item.color : undefined, // Цвет для букв
+              color: item.type === 'letter' ? item.color : undefined,
               transitionDelay: `${item.columnIndex * 100}ms`,
             }}
           >

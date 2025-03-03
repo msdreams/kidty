@@ -25,6 +25,14 @@ import avatarImage9 from '../assets/avatars/9.png'
 import avatarImage10 from '../assets/avatars/10.png'
 import avatarImage11 from '../assets/avatars/11.png'
 import avatarImage12 from '../assets/avatars/12.png'
+import avatarImage13 from '../assets/avatars/13.png'
+import avatarImage14 from '../assets/avatars/14.png'
+import avatarImage15 from '../assets/avatars/15.png'
+import avatarImage16 from '../assets/avatars/16.png'
+import avatarImage17 from '../assets/avatars/17.png'
+import avatarImage18 from '../assets/avatars/18.png'
+import avatarImage19 from '../assets/avatars/19.png'
+import avatarImage20 from '../assets/avatars/20.png'
 
 export const avatar_1 = avatarImage1;
 export const avatar_2 = avatarImage2;
@@ -38,9 +46,18 @@ export const avatar_9 = avatarImage9;
 export const avatar_10 = avatarImage10;
 export const avatar_11 = avatarImage11;
 export const avatar_12 = avatarImage12;
+export const avatar_13 = avatarImage13;
+export const avatar_14 = avatarImage14;
+export const avatar_15 = avatarImage15;
+export const avatar_16 = avatarImage16;
+export const avatar_17 = avatarImage17;
+export const avatar_18 = avatarImage18;
+export const avatar_19 = avatarImage19;
+export const avatar_20 = avatarImage20;
+
 
 export const avatars = [
-  avatarImage1,
+  avatarImage10,
   avatarImage2,
   avatarImage3,
   avatarImage4,
@@ -49,9 +66,17 @@ export const avatars = [
   avatarImage7,
   avatarImage8,
   avatarImage9,
-  avatarImage10,
+  avatarImage1,
   avatarImage11,
   avatarImage12,
+  avatarImage13,
+  avatarImage14,
+  avatarImage15,
+  avatarImage16,
+  avatarImage17,
+  avatarImage18,
+  avatarImage19,
+  avatarImage20,
 ]
 
 export const foot = footImage;

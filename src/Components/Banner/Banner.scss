@@ -3,18 +3,18 @@
 .banner-container {
   position: relative;
   overflow: hidden;
-  height: 280px; // Высота контейнера
+  height: 300px; // Высота контейнера
   cursor: pointer;
 
   @include on-tablet {
-    height: 350px; // Высота контейнера
+    height: 300px; // Высота контейнера
   }
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); // 5 столбцов
-  grid-template-rows: repeat(7, 70px); // 10 строк по 70px высоты
+  grid-template-columns: repeat(4, 1fr); // 5 столбцов
+  grid-template-rows: repeat(4, 1fr); // 10 строк по 70px высоты
   text-align: center;
   width: 100%;
   height: 100%;
@@ -22,7 +22,7 @@
 
   @include on-tablet {
     grid-template-columns: repeat(5, 1fr); // 5 столбцов
-    grid-template-rows: repeat(7, 70px); // 10 строк по 70px высоты
+    grid-template-rows: repeat(7, 1fr); // 10 строк по 70px высоты
   }
 }
 
@@ -31,8 +31,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 10px;
-  font-size: 24px;
+  font-size: 48px;
   width: 100%;
   height: 100%; // Высота элемента соответствует высоте строки
   box-sizing: border-box;
@@ -45,38 +44,38 @@
 
 .grid-item.shape.square {
   border-radius: 0;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 }
 
 .grid-item.shape.rectangle {
   border-radius: 0;
-  width: 20px;
-  height: 50px;
+  width: 60px;
+  height: 100px;
 }
 
 .grid-item.shape.t-shape {
   border-radius: 0;
-  width: 50px;
-  height: 20px;
+  width: 100px;
+  height: 40px;
 }
 
 .grid-item.shape.d-shape {
   border-radius: 0 25px 25px 0;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 }
 
 .grid-item.shape.circle {
   border-radius: 0;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 }
 
 .avatar {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%; /* Обрезка в виде круга */
   object-fit: cover; /* Для корректного отображения изображений */
 }

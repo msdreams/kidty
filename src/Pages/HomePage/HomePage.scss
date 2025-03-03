@@ -29,7 +29,7 @@
     @include middle {
       padding-top: 16px;
 
-    grid-column: 13 / -2;
+    grid-column: 14 / -2;
     }
   }
 
@@ -72,7 +72,6 @@
 
   &__bunner {
     padding: 20px;
-    padding-left: 60px;
     grid-column: 1 / -1;
     background-color: #fff;
     box-shadow: 0px 0px 8px rgba(34, 2, 73, 0.2);
@@ -80,7 +79,7 @@
     margin-bottom: 20px;
 
     @include middle {
-      grid-column: 1 / 12;
+      grid-column: 1 / 13;
     }
   }
 
